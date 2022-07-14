@@ -1,0 +1,83 @@
+@import "src/variables";
+
+.mainSection {
+  background-color: $backgroundWhite;
+  width: 100vw;
+  max-height: 100vh;
+  height: auto;
+  padding: 40px 85px;
+
+  .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .blockquoteContainer {
+      margin-bottom: 35px;
+
+      blockquote {
+        color: $grayText;
+        font-style: italic;
+        font-size: 24px;
+      }
+    }
+
+    .inputContainer {
+      margin-bottom: 35px;
+
+      input {
+        width: 800px;
+        padding: 20px;
+        border-radius: 30px;
+        border: 1px solid $grayBorder;
+        outline: none;
+        font-size: 20px;
+        color: $grayText;
+
+        &::placeholder {
+          color: $grayBorder;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: $backgroundWhite;
+        }
+      }
+    }
+
+    .buttonContainer {
+      margin-bottom: 50px;
+      button {
+        padding: 15px 30px;
+        border: none;
+        color: $white;
+        background-color: $secondaryColor;
+        font-size: 24px;
+        border-radius: 30px;
+        cursor: pointer;
+
+        &:hover,
+        &:focus,
+        &:active {
+          opacity: 0.7;
+        }
+
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .divider {
+      width: 5px;
+      height: 600px;
+      background-color: $secondaryColor;
+    }
+  }
+}
