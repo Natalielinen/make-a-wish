@@ -1,13 +1,20 @@
 @import "../../styles/variables";
 
 .hero {
-  /*position: relative;*/
+  position: relative;
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(to bottom, $primaryColor, $secondaryColor);
+
+  .star {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, $lightYellow 0%, $transparentWhite 100%);
+    box-shadow: 0 0 50px $shadowWhite;
+  }
 
   .center {
     display: flex;

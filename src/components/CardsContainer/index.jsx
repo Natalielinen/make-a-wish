@@ -8,8 +8,10 @@ import {NavLink} from 'react-router-dom';
 
 const CardsContainer = ({title, href}) => {
     const [isModalVisible, setIsModalVisible] = useState(false)
-    const wishes = useSelector(state => state.wishes.items)
+    const stars = useSelector(state => state.wishes.stars)
     const stories = useSelector(state => state.stories.items)
+
+    const wishes = stars.map(star => star.wish)
 
     return (
         <div className={styles.container}>
