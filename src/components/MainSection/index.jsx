@@ -36,9 +36,9 @@ const MainSection = () => {
                 </div>
             </div>
             <div className={styles.bottom}>
-                <CardsContainer title="Stories" href="www.stories.com"/>
+                <CardsContainer title="Stories" href="/stories"/>
                 <div className={styles.divider}></div>
-                <CardsContainer title="Wishes" href="www.wishes.com"/>
+                <CardsContainer title="Wishes" href="/wishes"/>
             </div>
         </section>
     );

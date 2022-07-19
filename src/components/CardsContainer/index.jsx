@@ -4,6 +4,7 @@ import {FiPlus} from 'react-icons/fi';
 import Card from '../Card';
 import Modal from '../Modal';
 import {useSelector} from 'react-redux';
+import {NavLink} from 'react-router-dom';
 
 const CardsContainer = ({title, href}) => {
     const [isModalVisible, setIsModalVisible] = useState(false)
@@ -34,10 +35,10 @@ const CardsContainer = ({title, href}) => {
                     : wishes.slice(0, 3).map(text => <Card text={text}/>)
             }
             {
-              title ===  'Stories' && stories.length > 3 ?  <a href={href}>Read more...</a> : ''
+              title ===  'Stories' && stories.length > 3 ?  <NavLink to={href}>Read more...</NavLink> : ''
             }
             {
-                title === 'Wishes' && wishes.length > 3 ? <a href={href}>Read more...</a> : ''
+                title === 'Wishes' && wishes.length > 3 ? <NavLink to={href}>Read more...</NavLink> : ''
             }
         </div>
     );
