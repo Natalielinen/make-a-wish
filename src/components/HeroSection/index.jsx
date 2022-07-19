@@ -9,7 +9,8 @@ const HeroSection = () => {
                 <div className={styles.mainStar}></div>
             </div>
         </section>
-    )
-}
+    );
+};
 
 export default HeroSection;
+

@@ -1,11 +1,12 @@
-@import "src/variables";
+@import "../../styles/variables";
+
 .hero {
   /*position: relative;*/
+  width: 100vw;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  height: 100vh;
   background: linear-gradient(to bottom, $primaryColor, $secondaryColor);
 
   .center {
@@ -15,10 +16,11 @@
     justify-content: center;
 
     h1 {
-      color: $white;
       font-size: 40px;
       margin-bottom: 10px;
+      color: $white;
       transition: all .5s ease-in-out;
+
       &:hover {
         transform: scale(1.1);
         text-shadow: 0 0 15px $lightYellow;
@@ -32,6 +34,7 @@
       background: radial-gradient(circle, $lightYellow 0%, $transparentWhite 100%);
       box-shadow: 0 0 50px $shadowWhite;
       transition: all .5s ease-in-out;
+
       &:hover {
         transform: scale(1.1);
         box-shadow: 0 0 100px $shadowWhite;
