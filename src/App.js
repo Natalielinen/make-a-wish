@@ -1,14 +1,21 @@
 import React from 'react';
-import HeroSection from './components/HeroSection';
-import MainSection from './components/MainSection';
-import Footer from './components/Footer';
+import {
+    Routes,
+    Route,
+} from 'react-router-dom';
+import Home from './pages/Home';
+import Stories from './pages/Stories';
+import Wishes from './pages/Wishes';
 
 const App = () => {
     return (
         <>
-            <HeroSection/>
-            <MainSection/>
-            <Footer />
+            <Routes>
+                <Route path='/' element={<Home />}/>
+                <Route path='/stories' element={<Stories />}/>
+                <Route path='/wishes' element={<Wishes />}/>
+            </Routes>
+
         </>
     );
 };
