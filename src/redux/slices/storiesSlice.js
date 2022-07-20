@@ -8,6 +8,7 @@ const initialState = {
         'stories Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor eros non cursus hendrerit. Cras id lectus non orci ornare rhoncus. Curabitur mollis ante ac consectetur pulvinar.',
         'stories Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor eros non cursus hendrerit. Cras id lectus non orci ornare rhoncus. Curabitur mollis ante ac consectetur pulvinar.',
     ]
+
 };
 
 const storiesSlice = createSlice({
@@ -15,8 +16,9 @@ const storiesSlice = createSlice({
     initialState,
     reducers: {
         addStory: (state, action) => {
-            state.items = [...state.items, action.payload]
+            state.items = [action.payload, ...state.items]
         }
+
     }
 });
 

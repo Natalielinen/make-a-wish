@@ -6,7 +6,9 @@ import Content from '../../components/Content';
 
 const Wishes = () => {
 
-    const wishes = useSelector(state => state.wishes.items);
+    const stars = useSelector(state => state.wishes.stars);
+
+    const wishes = stars.map(star => star.wish)
 
     useEffect(() => {
         window.scrollTo(0, 0);

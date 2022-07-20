@@ -1,12 +1,6 @@
 import {createSlice} from '@reduxjs/toolkit';
 
 const initialState = {
-    /*items: [
-        'wishes Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor eros non cursus hendrerit. Cras id lectus non orci ornare rhoncus. Curabitur mollis ante ac consectetur pulvinar.',
-        'wishes Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor eros non cursus hendrerit. Cras id lectus non orci ornare rhoncus. Curabitur mollis ante ac consectetur pulvinar.',
-        'wishes Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor eros non cursus hendrerit. Cras id lectus non orci ornare rhoncus. Curabitur mollis ante ac consectetur pulvinar.',
-        'wishes Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor eros non cursus hendrerit. Cras id lectus non orci ornare rhoncus. Curabitur mollis ante ac consectetur pulvinar.',
-    ],*/
     stars: [
         {
             id: 1,
@@ -33,7 +27,7 @@ const wishesSlice = createSlice({
     initialState,
     reducers: {
         addWish: (state, action) => {
-         state.stars = [...state.stars, action.payload]
+         state.stars = [action.payload, ...state.stars]
         }
     }
 });
