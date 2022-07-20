@@ -1,13 +1,16 @@
-import React, {useState} from 'react';
+import React, {memo, useEffect, useState} from 'react';
 import {BsQuestionCircle} from 'react-icons/bs';
 import CardsContainer from '../CardsContainer';
 import styles from './styles.module.scss';
 import Modal from '../Modal';
 import {useDispatch} from 'react-redux';
 import {addWish} from '../../redux/slices/whishesSlice';
+import axios from 'axios';
 
 const MainSection = () => {
     const [isModalVisible, setIsModalVisible] = useState(false);
+    const [phrases, setPhrases] = useState([])
+    const [phrase, setPhrase] = useState({})
     const [inputValue, setInputValue] = useState('')
     const dispatch = useDispatch()
 
@@ -30,11 +33,25 @@ const MainSection = () => {
         setInputValue('')
     }
 
+    const fetchData = async () => {
+        const res = await axios.get('https://type.fit/api/quotes')
+        setPhrases(res.data)
+    }
+
+    useEffect(() => {
+        fetchData()
+    }, [])
+
+    useEffect(() => {
+        const random = Math.round(Math.random() * phrases.length)
+        setPhrase(phrases[random])
+    }, [phrases])
+
     return (
         <section className={styles.mainSection}>
             <div className={styles.top}>
                 <div className={styles.blockquoteContainer}>
-                    <blockquote>“Some wise words” - by Some Wise Old Person</blockquote>
+                    <blockquote>“{phrase?.text}” - by {phrase?.author}</blockquote>
                 </div>
                 <div className={styles.inputContainer}>
                     <input type="text" placeholder="Enter your wish..." value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
@@ -67,4 +84,4 @@ const MainSection = () => {
     );
 };
 
-export default MainSection;
+export default memo(MainSection);
