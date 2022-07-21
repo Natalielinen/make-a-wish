@@ -27,7 +27,7 @@ const wishesSlice = createSlice({
     initialState,
     reducers: {
         addWish: (state, action) => {
-         state.stars = [action.payload, ...state.stars]
+            state.stars = [action.payload, ...state.stars];
         }
     }
 });

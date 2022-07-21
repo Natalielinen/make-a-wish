@@ -9,7 +9,7 @@ const Modal = ({children, setIsVisible}) => {
             <div className={styles.modalHeader}><AiOutlineClose onClick={() => setIsVisible(false)}/></div>
             <div>{children}</div>
         </div>
-    )
-}
+    );
+};
 
 export default Modal;

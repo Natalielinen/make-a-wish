@@ -16,7 +16,7 @@ const storiesSlice = createSlice({
     initialState,
     reducers: {
         addStory: (state, action) => {
-            state.items = [action.payload, ...state.items]
+            state.items = [action.payload, ...state.items];
         }
 
     }

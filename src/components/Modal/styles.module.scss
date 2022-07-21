@@ -1,13 +1,13 @@
 @import "src/styles/variables";
 
 .modal {
+  position: absolute;
   z-index: 100;
+  min-width: 500px;
+  min-height: 500px;
   background-color: $white;
   color: $grayText;
   box-shadow: 5px 5px 15px 0 $cardShadow;
-  min-width: 500px;
-  min-height: 500px;
-  position: absolute;
 
   .modalHeader {
     display: flex;

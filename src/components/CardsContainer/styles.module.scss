@@ -2,11 +2,11 @@
 @import "src/styles/commonStyles";
 
 .container {
-  width: 40vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 40vw;
 
   .titleContainer {
     display: flex;
@@ -15,9 +15,9 @@
     margin-bottom: 35px;
 
     h2 {
+      margin-right: 15px;
       font-size: 32px;
       font-weight: normal;
-      margin-right: 15px;
       color: $secondaryColor;
     }
 
@@ -25,9 +25,9 @@
       cursor: pointer;
 
       svg {
-        color: $secondaryColor;
         width: 32px;
         height: 32px;
+        color: $secondaryColor;
 
         &:hover {
           opacity: 0.7;
@@ -61,13 +61,12 @@
       }
     }
 
-
   }
 
   a {
-    color: $secondaryColor;
-    text-decoration: none;
     font-size: 20px;
+    text-decoration: none;
+    color: $secondaryColor;
 
     &:hover {
       opacity: 0.7;

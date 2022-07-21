@@ -3,8 +3,8 @@ import wishes from './slices/whishesSlice';
 import stories from './slices/storiesSlice';
 
 export const store = configureStore({
-        reducer: {
-            wishes,
-            stories
-        }
-})
+    reducer: {
+        wishes,
+        stories
+    }
+});

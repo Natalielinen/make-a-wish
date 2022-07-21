@@ -1,11 +1,11 @@
 import React, {memo, useEffect, useState} from 'react';
 import {BsQuestionCircle} from 'react-icons/bs';
+import {useDispatch} from 'react-redux';
+import axios from 'axios';
 import CardsContainer from '../CardsContainer';
 import styles from './styles.module.scss';
 import Modal from '../Modal';
-import {useDispatch} from 'react-redux';
 import {addWish} from '../../redux/slices/whishesSlice';
-import axios from 'axios';
 
 const MainSection = () => {
     const [isModalVisible, setIsModalVisible] = useState(false);
@@ -15,7 +15,6 @@ const MainSection = () => {
     const dispatch = useDispatch()
 
     const onMakeWish = (wish) => {
-        console.log('done', wish);
 
         const size = wish.length < 60 ? `${wish.length}px` : `${Math.round(wish.length / 5)}px`;
 

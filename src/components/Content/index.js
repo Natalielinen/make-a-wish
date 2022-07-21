@@ -1,8 +1,8 @@
 import React from 'react';
-import Card from '../Card';
-import styles from './styles.module.scss';
 import {NavLink} from 'react-router-dom';
 import {BsFillArrowLeftCircleFill} from 'react-icons/bs';
+import Card from '../Card';
+import styles from './styles.module.scss';
 
 const Content = ({array}) => {
     return (

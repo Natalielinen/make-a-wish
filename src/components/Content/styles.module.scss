@@ -1,12 +1,12 @@
 @import "src/styles/variables";
 
 .container {
+  margin-top: 35px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 35px;
 
   .arrowBtn {
     position: absolute;
@@ -14,9 +14,9 @@
     left: 40px;
 
     svg {
-      color: $secondaryColor;
       width: 60px;
       height: 60px;
+      color: $secondaryColor;
 
       &:hover,
       &:focus,
