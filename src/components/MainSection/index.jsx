@@ -59,13 +59,15 @@ const MainSection = () => {
                         isModalVisible && <Modal setIsVisible={setIsModalVisible}>
                             <div className={styles.rules}>
                                 <h3>Wishes Rules</h3>
+                                <h4>Not allowed:</h4>
                                 <ul>
-                                    <li>one</li>
-                                    <li>two</li>
-                                    <li>three</li>
-                                    <li>four</li>
-                                    <li>five</li>
+                                    <li>Any insults</li>
+                                    <li>Rude words</li>
+                                    <li>Wishes for death, mutilation, etc.</li>
+                                    <li>Humiliation in any forms</li>
                                 </ul>
+                                <p>* the site administration reserves the right to remove content that does not comply with the rules or of questionable content</p>
+                                <p>** be careful what you wish for because your wishes tend to come true</p>
                             </div>
                         </Modal>
                     }

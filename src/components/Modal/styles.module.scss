@@ -3,7 +3,7 @@
 .modal {
   position: absolute;
   z-index: 100;
-  min-width: 500px;
+  max-width: 500px;
   min-height: 500px;
   background-color: $white;
   color: $grayText;
