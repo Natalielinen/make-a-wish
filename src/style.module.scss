@@ -1,0 +1,22 @@
+@import "styles/variables";
+
+.appContainer {
+  position: relative;
+
+  .langBtn {
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    background-color: $primaryColor;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 6px 10px;
+
+    &:hover {
+      box-shadow: 5px 5px 10px $cardShadow;
+    }
+  }
+}
