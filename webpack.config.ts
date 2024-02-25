@@ -1,7 +1,7 @@
 import webpack from 'webpack';
 import path from 'path';
-import {BuildEnv, BuildPaths} from "./config/webpak-build/types/config";
-import {buildWebpackConfig} from "./config/webpak-build/buildWebpackConfig";
+import { BuildEnv, BuildPaths } from './config/webpak-build/types/config';
+import { buildWebpackConfig } from './config/webpak-build/buildWebpackConfig';
 
 export default (env: BuildEnv) => {
     const paths: BuildPaths = {
@@ -9,6 +9,7 @@ export default (env: BuildEnv) => {
         build: path.resolve(__dirname, 'build'),
         html: path.resolve(__dirname, 'public', 'index.html'),
         src: path.resolve(__dirname, 'src'),
+        extractedTranslations: path.resolve(__dirname, 'extractedTranslations'),
     };
 
     const mode = env.mode || 'development';
